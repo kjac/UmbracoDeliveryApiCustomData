@@ -1,0 +1,24 @@
+﻿<div class="umb-property-editor umb-multiple-textbox" ng-controller="My.Books.Controller as vm">
+  <ng-form name="myBooksForm">
+    <div ui-sortable="vm.sortableOptions" ng-model="vm.items">
+      <div class="flex flex-wrap textbox-wrapper" ng-repeat="item in vm.items track by $index">
+        <input type="number" name="item_{{$index}}" ng-model="item.value" placeholder="ISBN13"
+               class="umb-property-editor umb-textstring textstring flx-i"/>
+
+        <div class="icon-wrapper">
+          <umb-icon icon="icon-navigation" class="icon handle" localize="title" title="@general_move"></umb-icon>
+
+          <div class="umb-multiple-textbox__confirm">
+            <button type="button" class="umb-multiple-textbox__confirm-action" ng-click="vm.remove($index)">
+              <umb-icon icon="icon-trash"></umb-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="add-link" ng-click="vm.add()">
+      <localize key="general_add">Add</localize>
+    </button>
+  </ng-form>
+</div>

@@ -1,0 +1,17 @@
+﻿{
+    "name": "My Books",
+    "version": "1.0.0",
+    "javascript": [
+        "/App_Plugins/My.Books/my.books.controller.js"
+    ],
+    "propertyEditors": [{
+            "alias": "My.Books",
+            "name": "My Books",
+            "editor": {
+                "view": "~/App_Plugins/My.Books/my.books.html",
+                "hideLabel": false,
+                "valueType": "JSON"
+            }
+        }
+    ]
+}
